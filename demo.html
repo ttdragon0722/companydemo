@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>情人節快樂</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class>
+        <audio id="background-music" preload="auto">
+            <source src="source/那些年.mp3" type="audio/mpeg">
+            您的瀏覽器不支援音訊標籤。
+        </audio>
+        <div class="bg-black w-full h-dvh flex items-center justify-center absolute z-[100]"
+            id="fadeElement">
+            <div class="text-center text-white">
+                <h1 class="text-4xl font-bold mb-4">哈囉小0</h1>
+                <hr class="border-t-2 border-white w-1/2 mx-auto my-4">
+                <!-- 1 -->
+                <button id="startButton"
+                    onclick="start()"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    準備好了嗎？
+                </button>
+
+                <!-- 輸入框 2 -->
+                <div id="puzzle" style="display: none;">
+                    <label for="password"
+                        class="block mb-2 text-md font-medium text-gray-900 dark:text-white">在開始之前，先進行一個小小的解謎。小0可以先猜猜看密碼是什麼</label>
+                    <input type="text" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="密碼" required />
+                    <div class="text-xl text-black hover:text-white">提示：..
+                        .-..--- ...- . ..-</div>
+                    <button id="goButton"
+                        onclick="go()"
+                        class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        輸入密碼
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="relative w-full h-[50000px]">
+            <div class="h-[700px]"></div>
+            <div class="relative page-1 h-[200vh]">
+                <div class="sticky top-0 left-0 w-full h-screen">
+                    <img class="w-full h-full object-cover object-center" src="source/IMG_2183.jpg" alt="">
+                </div>
+            </div>
+            <div class="relative page-2 h-[200vh]">
+                <div class="sticky top-0 left-0 w-full h-screen">
+                    <img class="w-full h-full object-cover object-center" src="source/_DSC1935.jpg" alt="">
+                </div>
+            </div>
+            <div class="relative page-3 h-[200vh]">
+                <div class="sticky top-0 left-0 w-full h-screen">
+                    <img class="w-full h-full object-cover object-center" src="source/DSC05417.jpg" alt="">
+                </div>
+            </div>
+            <div class="relative page-4 h-[200vh]">
+                <div class="sticky top-0 left-0 w-full h-screen">
+                    <img class="w-full h-full object-cover object-center" src="source/IMG_2183.jpg" alt="">
+                </div>
+            </div>
+            <div class="relative page-5 h-[200vh]">
+                <div class="sticky top-0 left-0 w-full h-screen">
+                    <img class="w-full h-full object-cover object-center" src="source/IMG_2183.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <script>    
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.fromTo(".page-1", 
+            { opacity: 0 }, 
+            { 
+                opacity: 1, 
+                duration: 1, // 增加動畫持續時間
+                scrollTrigger: {
+                    trigger: ".page-1",
+                    start: "-15% 60%",
+                    end: "50% 60%",
+                    //markers: true, // 顯示標記，幫助調試
+                    scrub: true
+                }
+            }
+            );
+            gsap.fromTo(".page-1", 
+            { opacity: 1 }, 
+            { 
+                opacity: 0, 
+                duration: 1, // 增加動畫持續時間
+                scrollTrigger: {
+                    trigger: ".page-1",
+                    start: "90% 60%",
+                    end: "110% 60%",
+                    markers: true, // 顯示標記，幫助調試
+                    scrub: true
+                }
+            }
+            );
+
+            gsap.fromTo(".page-2", 
+            { opacity: 0 }, 
+            { 
+                opacity: 1, 
+                duration: 1, // 增加動畫持續時間
+                scrollTrigger: {
+                    trigger: ".page-2",
+                    start: "-15% 60%",
+                    end: "50% 60%",
+                    //markers: true, // 顯示標記，幫助調試
+                    scrub: true
+                }
+            }
+            );
+            gsap.fromTo(".page-2", 
+            { opacity: 1 }, 
+            { 
+                opacity: 0, 
+                duration: 1, // 增加動畫持續時間
+                scrollTrigger: {
+                    trigger: ".page-2",
+                    start: "90% 60%",
+                    end: "110% 60%",
+                    markers: true, // 顯示標記，幫助調試
+                    scrub: true
+                }
+            }
+            );
+            //gsap.fromTo(".page-2", 
+            //{ opacity: 0 }, 
+            //{ 
+            //    opacity: 1, 
+            //    duration: 1, // 增加動畫持續時間
+            //    scrollTrigger: {
+            //        trigger: ".page-2",
+            //        start: "top center",
+            //        end: "top",
+            //        markers: true, // 顯示標記，幫助調試
+            //        scrub: true
+            //    }
+            //}
+            //);
+            //gsap.fromTo(".page-3", 
+            //{ opacity: 0 }, 
+            //{ 
+            //    opacity: 1, 
+            //    duration: 1, // 增加動畫持續時間
+            //    scrollTrigger: {
+            //        trigger: ".page-3",
+            //        start: "top center",
+            //        end: "top",
+            //        markers: true, // 顯示標記，幫助調試
+            //        scrub: true
+            //    }
+            //}
+            //);
+            //gsap.fromTo(".page-4", 
+            //{ opacity: 0 }, 
+            //{ 
+            //    opacity: 1, 
+            //    duration: 1, // 增加動畫持續時間
+            //    scrollTrigger: {
+            //        trigger: ".page-4",
+            //        start: "top center",
+            //        end: "top",
+            //        markers: true, // 顯示標記，幫助調試
+            //        scrub: true
+            //    }
+            //}
+            //);
+            //gsap.fromTo(".page-5", 
+            //{ opacity: 0 }, 
+            //{ 
+            //    opacity: 1, 
+            //    duration: 1, // 增加動畫持續時間
+            //    scrollTrigger: {
+            //        trigger: ".page-5",
+            //        start: "top center",
+            //        end: "top",
+            //        markers: true, // 顯示標記，幫助調試
+            //        scrub: true
+            //    }
+            //}
+            //);
+
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var music = document.getElementById('background-music');
+                music.load();   
+            });
+
+            const playMusic = () => {
+                var music = document.getElementById('background-music');
+                music.play();
+            };
+
+            const go = () => {
+                const passwordInput = document.getElementById('password').value;
+                    if (passwordInput === 'iloveu' || 1) {
+                        alert('密碼正確！');
+                        const fadeButton = document.getElementById('fadeButton');
+                        const fadeElement = document.getElementById('fadeElement');
+                        gsap.to(fadeElement, { opacity: 0, duration: 1,ease:"power", display:"none"});
+                        ScrollTrigger.refresh();
+                    } else {
+                        alert('錯誤');
+            }
+            }
+
+            const start = () => {
+                gsap.to("#startButton", { opacity: 0, duration: 0.5, onComplete: function() {
+                    document.getElementById("startButton").style.display = 'none';
+                    // 顯示輸入框並淡入
+                    document.getElementById("puzzle").style.display = 'block';
+                    gsap.fromTo("#puzzle", { opacity: 0 }, { opacity: 1, duration: 0.5 });
+                }});
+                // playMusic();
+            };
+            const fadeButton = document.getElementById('fadeButton');
+            const fadeElement = document.getElementById('fadeElement');
+            //gsap.to(fadeElement, { opacity: 0, duration: 1,ease:"power", display:"none"});
+    </script>
+    </body>
+</html>

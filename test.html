@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP 滾動滑動投影片示範</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide:nth-child(1) {
+            background-color: #FF5733; /* 第一張圖片的背景顏色 */
+        }
+        .slide:nth-child(2) {
+            background-color: #33FF57; /* 第二張圖片的背景顏色 */
+        }
+        .slide:nth-child(3) {
+            background-color: #3357FF; /* 第三張圖片的背景顏色 */
+        }
+        /* 更多 slide 的樣式可以在這裡添加 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">圖片 1</div>
+        <div class="slide">圖片 2</div>
+        <div class="slide">圖片 3</div>
+        <!-- 可以添加更多的 slide -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".slide", {
+            yPercent: -100 * (document.querySelectorAll(".slide").length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".container",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (document.querySelectorAll(".slide").length - 1),
+                end: () => "+=" + document.querySelector(".container").offsetHeight
+            }
+        });
+    </script>
+</body>
+</html>

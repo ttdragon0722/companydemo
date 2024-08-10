@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>形象首頁</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+
+        <!-- 導航欄 -->
+        <nav class="bg-white shadow-lg">
+            <div
+                class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">品牌名稱</div>
+                <div>
+                    <a href="#about"
+                        class="text-gray-600 hover:text-gray-800 mx-2">關於我們</a>
+                    <a href="#contact"
+                        class="text-gray-600 hover:text-gray-800 mx-2">聯絡我們</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主英雄區域 -->
+        <header class="bg-cover bg-center h-screen"
+            style="background-image: url('你的背景圖片URL');">
+            <div
+                class="flex items-center justify-center h-full bg-gray-800 bg-opacity-50">
+                <div class="text-center text-white">
+                    <h1 class="text-5xl font-bold mb-4">歡迎來到我們的網站</h1>
+                    <p class="text-xl mb-8">我們專注於提供最優質的產品與服務</p>
+                    <a href="#about"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">了解更多</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 關於我們區域 -->
+        <section id="about"
+            class="py-16 bg-white h-screen flex flex-col justify-center items-center">
+            <div
+                class="container mx-auto px-4 text-center flex flex-col items-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">關於我們</h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    我們是市場領先的品牌，致力於為客戶提供最佳的體驗。我們的專業團隊始終如一地追求卓越，並以客戶滿意度為最高目標。
+                </p>
+                <a href="#services"
+                    class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">了解更多</a>
+
+                <!-- 大圖 -->
+                <div class="mt-8 w-full max-w-4xl">
+                    <img src="source/ef618ffda0a44aacbe8ae1066bf203ab.jpeg"
+                        alt="關於我們背景圖片"
+                        class="w-full h-auto object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- 服務項目區域 -->
+        <section class="py-16 bg-gray-100 h-screen flex items-center relative">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-100 opacity-50"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2
+                    class="text-4xl font-bold text-gray-800 text-center mb-8">我們的服務</h2>
+                <p
+                    class="text-gray-600 text-center leading-relaxed max-w-2xl mx-auto mb-12">
+                    我們的服務涵蓋多個領域，從快速的交付到實用的解決方案，我們都能以專業態度來滿足您的需求。
+                </p>
+
+                <!-- 服務項目列表 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 單一服務項目 -->
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 text-blue-500 mb-4" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 11c0 3.866-1.343 7-3 7s-3-3.134-3-7 1.343-7 3-7 3 3.134 3 7zm0 0c0 3.866 1.343 7 3 7s3-3.134 3-7-1.343-7-3-7-3 3.134-3 7zm-6 10h12" />
+                        </svg>
+                        <!-- 服務名稱 -->
+                        <h3 class="text-xl font-semibold text-gray-800">態度</h3>
+                        <p class="text-gray-600 mt-2">專業且友善的服務態度。</p>
+                    </div>
+
+                    <!-- 單一服務項目 -->
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 text-green-500 mb-4" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 16h-1v-4h-1V9h1V8a1 1 0 012 0v1h1v3h-1v4h-1v1h-1v-1z" />
+                        </svg>
+                        <!-- 服務名稱 -->
+                        <h3 class="text-xl font-semibold text-gray-800">快速</h3>
+                        <p class="text-gray-600 mt-2">迅速且有效的服務交付。</p>
+                    </div>
+
+                    <!-- 單一服務項目 -->
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 text-red-500 mb-4" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12h6M9 16h6M10 8h4M21 21H3v-2h18v2zM6 4h12v6H6V4z" />
+                        </svg>
+                        <!-- 服務名稱 -->
+                        <h3 class="text-xl font-semibold text-gray-800">實用</h3>
+                        <p class="text-gray-600 mt-2">提供實際且可靠的解決方案。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 旋轉木馬區域 -->
+        <section class="py-16 h-screen bg-gray-200">
+            <div class="container mx-auto px-4 h-full">
+                <h2
+                    class="text-4xl font-bold text-gray-800 text-center mb-8">我們的工作</h2>
+
+                <!-- Carousel -->
+                <div class="relative h-full">
+                    <div
+                        class="carousel-container overflow-hidden relative w-full h-[80vh]">
+                        <div
+                            class="carousel-slide flex transition-transform duration-500 ease-in-out">
+                            <img src="source/1704982383703.jpg"
+                                class="w-full h-full object-cover object-center">
+                            <img src="source/_DSC1935.jpg"
+                                class="w-full h-full object-cover object-center">
+                            <img src="source/IMG20230609174122.jpg"
+                                class="w-full h-full object-cover object-center">
+                        </div>
+                    </div>
+
+                    <!-- 左右導航按鈕 -->
+                    <button
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2"
+                        onclick="prevSlide()">&#10094;</button>
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2"
+                        onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            let currentSlide = 0;
+        
+            function showSlide(index) {
+                const slides = document.querySelectorAll('.carousel-slide img');
+                if (index >= slides.length) currentSlide = 0;
+                if (index < 0) currentSlide = slides.length - 1;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.carousel-slide').style.transform = `translateX(${-slideWidth * currentSlide}px)`;
+            }
+        
+            function nextSlide() {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        
+            function prevSlide() {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        
+            // 自動切換圖片
+            setInterval(() => {
+                nextSlide();
+            }, 3000);
+        </script>
+        <!-- 產品圖片展示區域 -->
+        <section class="py-16 bg-gray-200">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold text-gray-800 text-center mb-8">我們的產品</h2>
+
+                <!-- 產品圖片網格 -->
+                <div
+                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品1</p>
+                            <p class="text-gray-600">$100</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品2</p>
+                            <p class="text-gray-600">$150</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品3</p>
+                            <p class="text-gray-600">$200</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品1</p>
+                            <p class="text-gray-600">$100</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品2</p>
+                            <p class="text-gray-600">$150</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品3</p>
+                            <p class="text-gray-600">$200</p>
+                        </div>
+                    </div>
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品1</p>
+                            <p class="text-gray-600">$100</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品2</p>
+                            <p class="text-gray-600">$150</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品3</p>
+                            <p class="text-gray-600">$200</p>
+                        </div>
+                    </div>
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品1</p>
+                            <p class="text-gray-600">$100</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品2</p>
+                            <p class="text-gray-600">$150</p>
+                        </div>
+                    </div>
+
+                    <!-- 單一產品圖片 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="source/IMG_2564.jpg" alt="產品3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="text-gray-800 font-semibold">產品3</p>
+                            <p class="text-gray-600">$200</p>
+                        </div>
+                    </div>
+
+                    <!-- 更多產品圖片... -->
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-8">
+            <h1
+                class="text-4xl font-bold text-gray-800 mb-8 text-center">購物車</h1>
+
+            <!-- 購物車項目列表 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div
+                    class="flex justify-between items-center mb-4 border-b pb-4">
+                    <div class="text-lg font-bold text-gray-800">商品</div>
+                    <div class="text-lg font-bold text-gray-800">價格</div>
+                    <div class="text-lg font-bold text-gray-800">數量</div>
+                    <div class="text-lg font-bold text-gray-800">小計</div>
+                </div>
+
+                <!-- 單一項目 -->
+                <div class="flex items-center mb-4">
+                    <img src="你的圖片URL1" alt="商品1"
+                        class="w-20 h-20 object-cover rounded mr-4">
+                    <div class="flex-1">
+                        <div class="text-gray-800 font-semibold">商品1</div>
+                        <div class="text-gray-600">$100</div>
+                    </div>
+                    <div>
+                        <input type="number" value="1"
+                            class="w-16 px-2 py-1 border border-gray-300 rounded">
+                    </div>
+                    <div class="text-gray-800 ml-4">$100</div>
+                </div>
+
+                <!-- 單一項目 -->
+                <div class="flex items-center mb-4">
+                    <img src="你的圖片URL2" alt="商品2"
+                        class="w-20 h-20 object-cover rounded mr-4">
+                    <div class="flex-1">
+                        <div class="text-gray-800 font-semibold">商品2</div>
+                        <div class="text-gray-600">$150</div>
+                    </div>
+                    <div>
+                        <input type="number" value="2"
+                            class="w-16 px-2 py-1 border border-gray-300 rounded">
+                    </div>
+                    <div class="text-gray-800 ml-4">$300</div>
+                </div>
+
+                <!-- 單一項目 -->
+                <div class="flex items-center mb-4">
+                    <img src="你的圖片URL3" alt="商品3"
+                        class="w-20 h-20 object-cover rounded mr-4">
+                    <div class="flex-1">
+                        <div class="text-gray-800 font-semibold">商品3</div>
+                        <div class="text-gray-600">$200</div>
+                    </div>
+                    <div>
+                        <input type="number" value="1"
+                            class="w-16 px-2 py-1 border border-gray-300 rounded">
+                    </div>
+                    <div class="text-gray-800 ml-4">$200</div>
+                </div>
+            </div>
+
+            <!-- 總計與操作按鈕 -->
+            <div class="flex justify-end items-center">
+                <div class="text-xl font-bold text-gray-800 mr-8">總計: $600</div>
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">更新購物車</button>
+                <button
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">結帳</button>
+            </div>
+        </div>
+
+        <!-- 聯絡我們區域 -->
+        <section id="contact" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold text-gray-800 text-center mb-8">聯絡我們</h2>
+                <form
+                    class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2"
+                            for="name">姓名</label>
+                        <input
+                            class="w-full px-3 py-2 border border-gray-300 rounded"
+                            type="text" id="name" placeholder="輸入你的姓名">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2"
+                            for="email">電子郵件</label>
+                        <input
+                            class="w-full px-3 py-2 border border-gray-300 rounded"
+                            type="email" id="email" placeholder="輸入你的電子郵件">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2"
+                            for="message">訊息</label>
+                        <textarea
+                            class="w-full px-3 py-2 border border-gray-300 rounded"
+                            id="message" rows="5"
+                            placeholder="輸入你的訊息"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            type="submit">送出</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 底部 -->
+        <footer class="bg-gray-800 text-white py-4 text-center">
+            <p>&copy; 2024 品牌名稱. 保留所有權利.</p>
+        </footer>
+
+    </body>
+</html>
